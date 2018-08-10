@@ -250,6 +250,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
+# Storage health HAL
+PRODUCT_PACKAGES += \
+    android.hardware.health.storage@1.0-service
+
 # Google Camera Go
 PRODUCT_PACKAGES += \
     GoogleCameraGo
