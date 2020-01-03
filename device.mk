@@ -419,6 +419,8 @@ PRODUCT_PACKAGES += \
     libjson \
     libjson.vendor \
     libprotobuf-cpp-full \
+    libril \
+    librilutils \
     librmnetctl
 
 PRODUCT_COPY_FILES += \
