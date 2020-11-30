@@ -441,6 +441,14 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
+# Service Tracker
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
+# System Helper
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.systemhelper@1.0.vendor
+
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
