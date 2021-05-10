@@ -41,3 +41,5 @@ type sysfs_irq, fs_type, sysfs_type;
 type proc_irq, fs_type, proc_type;
 
 type proc_sched_energy_aware, proc_type, fs_type;
+
+type kcal_dev, sysfs_type, fs_type;
