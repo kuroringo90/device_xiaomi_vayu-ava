@@ -120,6 +120,7 @@ vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 vendor.gralloc.disable_ubwc=0
 vendor.display.disable_metadata_dynamic_fps=1
+vendor.display.defer_fps_frame_count=4
 
 # Listen
 ro.vendor.audio.soundtrigger=sva
