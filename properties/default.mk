@@ -44,7 +44,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.early.sf.duration=16600000 \
     debug.sf.early.app.duration=16600000 \
     debug.sf.earlyGl.sf.duration=16600000 \
-    debug.sf.earlyGl.app.duration=16600000
+    debug.sf.earlyGl.app.duration=16600000 \
+    debug.sf.phase_offset_threshold_for_next_vsync_ns=12100000
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
