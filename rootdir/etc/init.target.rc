@@ -99,9 +99,6 @@ on post-fs-data
     mkdir /data/vendor/misc/display 0771 system system
     mkdir /data/vendor/nfc 0770 nfc nfc
 
-    mkdir /data/vendor/thermal 0771 root system
-    mkdir /data/vendor/thermal/config 0771 root system
-
     chown system system /dev/tfa_reg
     chown system system /dev/tfa_rw
     chown system system /dev/tfa_rpc
