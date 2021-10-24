@@ -1,1 +1,4 @@
 allow bootanim sysfs_kgsl:dir search;
+
+dontaudit bootanim sysfs_msm_subsys:dir search;
+dontaudit bootanim sysfs_msm_subsys:file r_file_perms;

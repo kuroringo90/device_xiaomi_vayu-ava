@@ -28,3 +28,6 @@ allow init vendor_sysfs_kgsl:file { open  write };
 allow init proc_sched_energy_aware:file { open  write };
 
 allow init hal_fingerprint_default:process { ptrace };
+allow init hwservicemanager:binder { call transfer };
+allow init init:capability { sys_nice };
+allow init same_process_hal_file:file execute;
