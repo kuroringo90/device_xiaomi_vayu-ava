@@ -19,3 +19,6 @@ dontaudit gmscore_app {
 # Ignore in user builds
 dontaudit traced_probes debugfs_tracing_debug:file rw_file_perms;
 dontaudit hal_atrace_default debugfs_tracing_debug:file rw_file_perms;
+
+# Thermal
+dontaudit vendor_thermal-engine self:capability dac_override;
