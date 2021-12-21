@@ -113,3 +113,6 @@
 
 # Oneshot IRQ rebalancer
 /vendor/bin/rebalance_interrupts-vayu           u:object_r:rebalance_interrupts_vendor_exec:s0
+
+# Widevine
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.4-service.clearkey                                     u:object_r:vendor_hal_drm_widevine_exec:s0
