@@ -29,16 +29,14 @@
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="31" />
+        android:minSdkVersion="30"
+        android:targetSdkVersion="30"/>
 
     <application
         android:label="@string/deviceparts_label"
         android:persistent="true">
 
-        <receiver
-            android:name=".BootCompletedReceiver"
-            android:exported="false">
+        <receiver android:name=".BootCompletedReceiver">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -48,8 +46,7 @@
         <activity
             android:name=".dirac.DiracActivity"
             android:label="@string/dirac_title"
-            android:theme="@style/Theme.SubSettingsBase"
-            android:exported="true">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -62,7 +59,7 @@
         <activity
             android:name=".display.LcdFeaturesPreferenceActivity"
             android:label="@string/lcd_features_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -90,8 +87,7 @@
         <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
-            android:theme="@style/Theme.SubSettingsBase"
-            android:exported="true">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -107,10 +103,9 @@
         </activity>
 
         <activity
-            android:name=".speaker.ClearSpeakerActivity" 
+            android:name=".speaker.ClearSpeakerActivity"
             android:label="@string/clear_speaker_title"
-            android:theme="@style/Theme.SubSettingsBase"
-            android:exported="true">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -128,7 +123,7 @@
         <activity
             android:name=".haptic.HapticLevelActivity"
             android:label="@string/haptic_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
