@@ -392,6 +392,10 @@ PRODUCT_PACKAGES += \
    TetheringConfigOverlayVayu \
    WifiOverlayVayu
 
+# Rebalancer
+PRODUCT_PACKAGES += \
+    rebalance_interrupts-vayu
+
 # Pixel Offline charger
 PRODUCT_PACKAGES += \
     charger_res_images \
