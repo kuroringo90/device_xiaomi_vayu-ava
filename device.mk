@@ -273,8 +273,7 @@ PRODUCT_PACKAGES += \
     init.mi.usb.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.dcvs.sh
+    init.qcom.usb.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
