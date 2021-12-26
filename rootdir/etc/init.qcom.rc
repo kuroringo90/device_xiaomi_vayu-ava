@@ -225,9 +225,6 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
-    # Create hvdcp_opti directory
-    mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
-
     #Create camera directory
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
 
@@ -240,7 +237,6 @@ on boot
     enable vendor.dataqti
     enable vendor.dataadpl
 
-    # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
 
@@ -660,24 +656,6 @@ service vendor.ril-daemon3 /vendor/bin/hw/rild -c 3
     group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
-service charger /system/bin/charger
-    class charger
-    user system
-    group system graphics input
-    capabilities SYS_BOOT
-    seclabel u:r:charger:s0
-
-service hvdcp /system/bin/hvdcp
-    class core
-    user root
-    disabled
-
-on property:persist.usb.hvdcp.detect=true
-    start hvdcp
-
-on property:persist.usb.hvdcp.detect=false
-    stop hvdcp
-
 service charger_monitor /system/bin/charger_monitor
     user root
     group root
@@ -701,9 +679,6 @@ service vm_bms /vendor/bin/vm_bms
     user root
     group root
     disabled
-
-on charger
-    setprop persist.sys.usb.config mass_storage
 
 #add poweroffhandler
 service poweroffhandler /system/vendor/bin/poweroffhandler

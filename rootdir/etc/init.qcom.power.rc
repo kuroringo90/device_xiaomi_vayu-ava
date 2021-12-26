@@ -36,6 +36,22 @@ on enable-low-power
     # Enable EAS
     write /proc/sys/kernel/sched_energy_aware 1
 
+    # Post-setup services
+    setprop vendor.post_boot.parsed 1
+
+on charger
+    setprop persist.sys.usb.config mass_storage
+    mkdir /mnt/vendor/persist
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/subsys 0770 root system
+    start vendor.hvdcp_opti
+    start vendor.power_off_alarm
+    setprop sys.usb.controller a600000.dwc3
+    setprop sys.usb.configfs 1
+    chown system system /sys/class/leds/white/brightness
+    write /sys/class/leds/white/brightness 255
+
 on property:init.svc.recovery=running
     trigger enable-low-power
 
@@ -123,3 +139,26 @@ on init
     # report max frequency to unity tasks.
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so,com.miHoYo,libUE4.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
+
+on boot
+    # Create hvdcp_opti directory
+    mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
+
+service charger /system/bin/charger
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+
+service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
+    class main
+    user root
+    group system wakelock
+    writepid /dev/cpuset/system-background/tasks
+
+on property:persist.usb.hvdcp.detect=true
+    start hvdcp
+
+on property:persist.usb.hvdcp.detect=false
+    stop hvdcp
