@@ -14,6 +14,9 @@ $(call inherit-product, device/xiaomi/vayu/device.mk)
 # Inherit common Syberia configurations
 $(call inherit-product, vendor/syberia/common.mk)
 
+# QuickTap
+TARGET_SUPPORTS_QUICK_TAP := true
+
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
