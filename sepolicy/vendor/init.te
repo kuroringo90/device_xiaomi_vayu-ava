@@ -25,5 +25,6 @@ allow init vendor_sysfs_graphics:file rw_file_perms;
 allow init sysfs_devices_system_cpu:file { write };
 allow init vendor_sysfs_devfreq:file { open  write };
 allow init vendor_sysfs_kgsl:file { open  write };
+allow init proc_sched_energy_aware:file { open  write };
 
 allow init hal_fingerprint_default:process { ptrace };
