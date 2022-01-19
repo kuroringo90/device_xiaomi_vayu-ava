@@ -36,4 +36,5 @@ allow hal_fingerprint_default vendor_sysfs_spss:dir { search };
 allow hal_fingerprint_default vendor_sysfs_spss:file { open read };
 allow hal_fingerprint_default system_data_root_file:file { read };
 allow hal_fingerprint_default rootfs:dir { read };
+allow hal_fingerprint_default rootfs:dir { open };
 allow hal_fingerprint_default system_data_root_file:file { append  getattr  open  write };
