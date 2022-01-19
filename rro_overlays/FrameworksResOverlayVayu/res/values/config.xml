@@ -820,4 +820,9 @@
         <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicNotificationsSettingsActivity</item>
         <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSetupWizardActivity</item>
     </string-array>
+
+    <!-- List of comma separated package names for 
+    which we the system will not show crash, ANR,
+         etc. dialogs. --> 
+    <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 </resources>
