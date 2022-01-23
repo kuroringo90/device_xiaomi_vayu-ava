@@ -184,6 +184,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.3-service.widevine-vayu.rc \
     android.hardware.drm@1.4-service.clearkey
 
 # Fastbootd
@@ -379,7 +380,12 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    vendor.qti.media.c2@1.0-service-vayu.rc
+
+# NNApiHAL
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3-service-qti-vayu.rc
 
 # Overlays
 PRODUCT_PACKAGES += \
