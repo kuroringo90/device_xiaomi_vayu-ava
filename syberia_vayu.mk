@@ -17,6 +17,9 @@ $(call inherit-product, vendor/syberia/common.mk)
 # QuickTap
 TARGET_SUPPORTS_QUICK_TAP := true
 
+# Pixel Charger
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
