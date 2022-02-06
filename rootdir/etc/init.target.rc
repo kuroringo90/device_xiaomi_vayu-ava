@@ -162,10 +162,6 @@ on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 200
 
-    # Disable wsf, beacause we are using efk.
-    # wsf Range : 1..1000 So set to bare minimum value 1.
-    write /proc/sys/vm/watermark_scale_factor 1
-
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
