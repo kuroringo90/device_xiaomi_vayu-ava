@@ -111,9 +111,6 @@ on enable-low-power
 
     chown system system /sys/class/devfreq/soc:qcom,l3-cdsp/userspace/set_freq
 
-    # Post-setup services
-    setprop vendor.post_boot.parsed 1
-
 on property:init.svc.vendor.charger=running
     # Keep one LITTLE and one big
     write /sys/devices/system/cpu/cpu1/online 0
@@ -130,6 +127,7 @@ on property:init.svc.vendor.charger=running
     mkdir /mnt/vendor/persist/subsys 0770 root system
     start vendor.hvdcp_opti
     start vendor.power_off_alarm
+    start qcom-post-boot
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
     chown system system /sys/class/leds/white/brightness
