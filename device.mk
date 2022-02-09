@@ -405,6 +405,7 @@ PRODUCT_PACKAGES += \
    SettingsOverlayVayu \
    SettingsProviderOverlayVayu \
    SystemUIOverlayVayu \
+   SystemAppLockOverlay \
    TelephonyOverlayVayu \
    TetheringConfigOverlayVayu \
    WifiOverlayVayu
