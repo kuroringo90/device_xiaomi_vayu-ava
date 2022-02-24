@@ -155,4 +155,17 @@
         <item>226 215 255 35 40 119 132 10</item>
         <item>240 230 220 35 40 119 132 10</item>
     </array>
+
+    <string-array name="pick_up_modes" translatable="false">
+        <item>"Off"</item>
+        <item>"Pulse notification"</item>
+        <item>"Raise to wake"</item>
+    </string-array>
+
+    <string-array name="pick_up_values" translatable="false">
+        <item>"0"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+    </string-array>
+
 </resources>
