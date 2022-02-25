@@ -26,10 +26,6 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # FaceUnlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# GApps
-WITH_GMS := true
-TARGET_GAPPS_ARCH := arm64
-
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := syberia_vayu
 PRODUCT_DEVICE := vayu
