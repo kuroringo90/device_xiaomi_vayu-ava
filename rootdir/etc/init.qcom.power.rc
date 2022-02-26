@@ -222,3 +222,14 @@ on property:persist.usb.hvdcp.detect=true
 
 on property:persist.usb.hvdcp.detect=false
     stop hvdcp
+
+# Thermal HAL needed
+on enable-thermal-hal
+    # Permission
+    chown root system /dev/thermal/cdev-by-name/battery/cur_state
+    chmod 660 /dev/thermal/cdev-by-name/battery/cur_state
+
+on charger
+    start vendor.thermal.symlinks
+    start vendor.thermal-engine
+    trigger enable-thermal-hal

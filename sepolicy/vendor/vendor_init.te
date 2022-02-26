@@ -1,6 +1,8 @@
 set_prop(vendor_init, vendor_power_prop)
 set_prop(vendor_init, vendor_alarm_boot_prop)
 set_prop(vendor_init, vendor_video_prop)
+set_prop(vendor_init, vendor_thermal_normal_prop)
+set_prop(vendor_init, vendor_thermal_prop)
 
 allow vendor_init {
   vendor_debugfs_clk
@@ -28,3 +30,5 @@ set_prop(vendor_init, vendor_persist_camera_prop)
 set_prop(vendor_init, init_service_status_prop)
 set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_ims_prop)
+allow vendor_init thermal_link_device:dir r_dir_perms;
+allow vendor_init thermal_link_device:lnk_file r_file_perms;
