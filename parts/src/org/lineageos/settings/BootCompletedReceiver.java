@@ -27,6 +27,7 @@ import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.haptic.HapticUtils;
+import org.lineageos.settings.touchscreen.TouchFeatureUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver implements Controller {
 
@@ -67,6 +68,7 @@ public class BootCompletedReceiver extends BroadcastReceiver implements Controll
                     PREF_HUE, HUE_DEFAULT));
         }
         DozeUtils.checkDozeService(context);
+        TouchFeatureUtils.startService(context);
         HapticUtils.restoreLevel(context);
     }
 }
