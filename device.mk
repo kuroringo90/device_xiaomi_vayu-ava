@@ -531,10 +531,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service.pixel
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.mock
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
