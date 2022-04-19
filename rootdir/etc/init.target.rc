@@ -214,12 +214,6 @@ service vendor.sec_nvm /vendor/bin/sec_nvm
     user system
     group system
 
-service vendor.energy-awareness /vendor/bin/energy-awareness
-    class main
-    user system
-    group system
-    oneshot
-
 service nv_mac /vendor/bin/nv_mac
     class late_start
     user system
