@@ -40,3 +40,6 @@ allow hal_fingerprint_default system_data_root_file:file { read };
 allow hal_fingerprint_default rootfs:dir { read };
 allow hal_fingerprint_default rootfs:dir { open };
 allow hal_fingerprint_default system_data_root_file:file { append  getattr  open  write };
+
+# Allow fp HAL to sent hint
+hal_client_domain(hal_fingerprint_default, hal_power)
