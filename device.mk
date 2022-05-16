@@ -148,14 +148,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     DeviceParts
 
-# Dex
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
-endif
-USE_DEX2OAT_DEBUG := false
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-impl \

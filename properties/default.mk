@@ -46,14 +46,3 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000 \
     debug.sf.phase_offset_threshold_for_next_vsync_ns=12100000
-
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    pm.dexopt.boot=verify \
-    pm.dexopt.first-boot=verify \
-    pm.dexopt.install=speed-profile \
-    dalvik.vm.image-dex2oat-filter=speed \
-    dalvik.vm.image-dex2oat-threads=8 \
-    dalvik.vm.dex2oat-filter=speed \
-    dalvik.vm.dex2oat-threads=8
-endif
