@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
 # Inherit common Superior configurations
-$(call inherit-product, vendor/superior/common.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
 # QuickTap
 TARGET_SUPPORTS_QUICK_TAP := true
