@@ -1,2 +1,1 @@
 allow untrusted_app sysfs_kgsl:dir search;
-allow untrusted_app tmpfs:lnk_file { read };
