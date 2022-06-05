@@ -6,6 +6,9 @@ allow vendor_init {
   vendor_debugfs_clk
   proc_dirty
   proc
+  sysfs_devices_system_cpu
+  vendor_sysfs_devfreq
+  vendor_sysfs_kgsl
 }:file w_file_perms;
 
 allow vendor_init block_device:lnk_file setattr;
