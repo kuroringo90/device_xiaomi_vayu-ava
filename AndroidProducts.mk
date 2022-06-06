@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_vayu.mk
+    $(LOCAL_DIR)/proton_vayu.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_vayu-eng \
-    superior_vayu-userdebug \
-    superior_vayu-user
+    proton_vayu-eng \
+    proton_vayu-userdebug \
+    proton_vayu-user
