@@ -1,6 +1,1 @@
 get_prop(untrusted_app, virtual_ab_prop);
-
-allow untrusted_app proc:file { getattr  open  read };
-allow untrusted_app proc_loadavg:file { getattr  open  read };
-allow untrusted_app proc_stat:file { getattr  open };
-allow untrusted_app proc_zoneinfo:file { open  read };
