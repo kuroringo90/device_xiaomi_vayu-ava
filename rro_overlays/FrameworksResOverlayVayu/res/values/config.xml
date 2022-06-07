@@ -840,4 +840,8 @@
      <!-- Ignore location indicator for the Phone Services -->
      <string name="config_systemNotificationIntelligence" translatable="false">com.android.phone</string>
 
+     <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
+         activated. -->
+     <integer name="config_nightDisplayColorTemperatureDefault">3339</integer>
+
 </resources>
