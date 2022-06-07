@@ -835,12 +835,7 @@
         <item>"com.google.android.apps.youtube.music"</item>
         <item>"com.vanced.android.youtube"</item>
         <item>"com.vanced.android.apps.youtube.music"</item>
-	<item>"com.zhiliaoapp.musically"</item>
     </string-array>
-
-     <!-- Package name of a telephony-related system app, such as an IMS service.
-         Exempted from privacy indicators. -->
-     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
 
      <!-- Ignore location indicator for the Phone Services -->
      <string name="config_systemNotificationIntelligence" translatable="false">com.android.phone</string>
