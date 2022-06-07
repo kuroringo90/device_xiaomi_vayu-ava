@@ -46,3 +46,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000 \
     debug.sf.phase_offset_threshold_for_next_vsync_ns=12100000
+
+# Disable remote keyguard animation
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.wm.enable_remote_keyguard_animation=0
