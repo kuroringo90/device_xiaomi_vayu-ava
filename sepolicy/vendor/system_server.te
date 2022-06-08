@@ -5,6 +5,6 @@ allow system_server sysfs_wakeup:file { read };
 get_prop(system_server, vendor_display_notch_prop)
 
 allow system_server app_zygote:process { getpgid };
-allow system_server proc:file { getattr open read };
+allow system_server proc:file { getattr };
 
 allow system_server vendor_sysfs_battery_supply:file rw_file_perms;
