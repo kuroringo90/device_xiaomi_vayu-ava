@@ -11,17 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# QuickTap
-TARGET_SUPPORTS_QUICK_TAP := true
+# Inherit some common ShapeShiftOS stuff.
+$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
 
-# Pixel Charger
+#Pixel Charger
 USE_PIXEL_CHARGER_IMAGES := true
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# FaceUnlock
-TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # GApps
 WITH_GMS := true
@@ -29,7 +26,7 @@ WITH_GMS := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := vayu
+PRODUCT_NAME := ssos_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco X3 Pro
