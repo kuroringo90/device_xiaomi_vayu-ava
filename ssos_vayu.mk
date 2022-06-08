@@ -14,16 +14,14 @@ $(call inherit-product, device/xiaomi/vayu/device.mk)
 # Inherit some common ShapeShiftOS stuff.
 $(call inherit-product, vendor/ssos/config/common_full_phone.mk)
 
-#Pixel Charger
-USE_PIXEL_CHARGER_IMAGES := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # GApps
-WITH_GMS := true
-
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
+WITH_GAPPS := true
+TARGET_ARCH := arm64
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := ssos_vayu
