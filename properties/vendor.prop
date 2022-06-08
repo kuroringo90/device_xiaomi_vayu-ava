@@ -103,6 +103,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
+debug.egl.hw=1
+debug.sf.hw=1
+debug.hwui.renderer=skiagl
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 debug.sdm.support_writeback=0
