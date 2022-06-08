@@ -11,14 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit common Superior configurations
-$(call inherit-product, vendor/superior/config/common.mk)
-
 # QuickTap
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Pixel Charger
-TARGET_INCLUDE_PIXEL_CHARGER := true
+USE_PIXEL_CHARGER_IMAGES := true
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -27,10 +24,12 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # GApps
-BUILD_WITH_GAPPS := true
+WITH_GMS := true
+
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := superior_vayu
+PRODUCT_NAME := vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco X3 Pro
@@ -44,3 +43,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_MODEL=M2102J20SI
 
 BUILD_FINGERPRINT := POCO/vayu_id/vayu:12/SKQ1.211006.001/V13.0.2.0.SJUIDXM:user/release-keys
+
