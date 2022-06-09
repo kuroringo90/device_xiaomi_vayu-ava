@@ -188,6 +188,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti.vendor \
     libsdmcore \
     libsdmutils \
+    libqdMetaData \
     libtinyxml \
     libvulkan \
     memtrack.msmnile \
